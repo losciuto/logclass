@@ -12,8 +12,11 @@ $log = new logger();
 
 // $log->app = false; // non visualizza il path ed il nome dell'applicazione chiamante
 
-// invio messaggio al logger
+// invio messaggio al logger con visualizzazione
 $log->write_log(__LINE__ . " " . $msg);
+
+// invio messaggio al logger senza visualizzazione
+$log->write_log(__LINE__ . " " . $msg,false);
 
 // visualizzo il contenuto del file di log
 $log->read_log();

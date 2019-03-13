@@ -57,8 +57,12 @@ class logger
     }
 
     // metodo di scrittura del record di log
-    public function write_log($msg)
+    public function write_log($msg,$visua=true)
     {
+
+        // definizione della variabile di visualizzazione a livello record di log
+        $globalvisua = $this->visua; // salvo il valore globale della variabile di visualizzazione
+        $this->visua = $visua; // attribuisco quella a livello di record di log
 
         // composizione del record di log
 
@@ -91,6 +95,8 @@ class logger
             echo "\nlog non scrivibile o non utilizzabile (permesso negato)\n";
 
         }
+
+        $this->visua = $globalvisua; // ristabilisco il valore precedente nella variabile globale di visualizzazione 
 
     }
 
