@@ -13,3 +13,5 @@ al costruttore possono essere inviati due valori auto espicativi:
 <b>$log->write_log("messaggio che va nel file di log e viene visualizzato");</b>
 
 <b>$log->write_log("messaggio che va nel file di log, ma non viene visualizzato",false);</b>
+
+La riga sopra non viene visualizzata a video anche se <b><i>$log->visua</i></b> è uguale a <b>true</b>.
